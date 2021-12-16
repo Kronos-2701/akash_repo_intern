@@ -95,12 +95,21 @@ class _CustomDialogBoxState extends State<CustomDialogBox> {
           Positioned(
             left: Constants.padding,
             right: Constants.padding,
-            child: CircleAvatar(
-              backgroundColor: Colors.transparent,
-              radius: Constants.avatarRadius,
-              child: ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(100)),
-                  child: Image.asset("assets/nfinal.jpeg")),
+            child: Container(
+              decoration: BoxDecoration(boxShadow: [
+                BoxShadow(
+                  offset: Offset(2, 2),
+                  blurRadius: 30,
+                  color: Color.fromRGBO(0, 0, 0, 0.10),
+                )
+              ]),
+              child: CircleAvatar(
+                backgroundColor: Colors.transparent,
+                radius: Constants.avatarRadius,
+                child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(100)),
+                    child: Image.asset("assets/nfinal.jpeg")),
+              ),
             ),
           ),
         ],
